@@ -1,0 +1,6 @@
+nt regionCode;
+            if (FileName.Length > 25 && int.TryParse(FileName.Substring(5, 4), out regionCode)
+                    && ConfigurationManager.AppSettings["CorrectFormats"].Contains(FileName.Substring(23, 3)))
+                return true;
+            else
+                return false;
